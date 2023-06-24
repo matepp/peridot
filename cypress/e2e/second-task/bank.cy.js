@@ -13,7 +13,8 @@ describe('Task two', () => {
     it('Validate deposit function', () => {
         depositAndValidateMessage(depositValues)
         validateBalanceValue(depositSum)
-        cy.get('[ng-click="transactions()"]').click();
+        cy.wait(2000)
+        cy.get('[ng-click="transactions()"]').click()
         validateSumOfTransactions(depositSum)
     })
 })
